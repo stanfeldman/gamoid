@@ -1,4 +1,4 @@
-package gamoid.core;
+package gamoid.game.controllers;
 
 import java.util.HashMap;
 import java.util.Map;

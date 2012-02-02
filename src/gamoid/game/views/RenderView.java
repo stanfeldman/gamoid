@@ -1,9 +1,9 @@
-package gamoid.core;
+package gamoid.game.views;
 
+import gamoid.game.models.Game;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 

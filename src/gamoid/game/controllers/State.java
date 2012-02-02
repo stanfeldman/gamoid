@@ -1,4 +1,4 @@
-package gamoid.core;
+package gamoid.game.controllers;
 
 public abstract class State
 {

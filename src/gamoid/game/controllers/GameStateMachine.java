@@ -1,6 +1,6 @@
-package gamoid.core;
+package gamoid.game.controllers;
 
-import gamoid.core.StateMachine;
+import gamoid.game.models.Game;
 
 public class GameStateMachine extends StateMachine<GameState>
 {

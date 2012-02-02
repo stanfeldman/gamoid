@@ -1,6 +1,4 @@
-package gamoid.core;
-
-import gamoid.core.State;
+package gamoid.game.controllers;
 
 public abstract class GameState extends State
 {

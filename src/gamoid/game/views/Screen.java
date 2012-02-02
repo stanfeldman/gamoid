@@ -1,4 +1,6 @@
-package gamoid.core;
+package gamoid.game.views;
+
+import gamoid.game.models.Game;
 
 public abstract class Screen 
 {

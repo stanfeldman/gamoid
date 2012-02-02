@@ -1,11 +1,12 @@
-package gamoid.core;
+package gamoid.game.models;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import gamoid.filesystem.FileIO;
+import gamoid.game.views.RenderView;
+import gamoid.game.views.Screen;
 import gamoid.graphics.Graphics;
-import gamoid.input.Input;
 import gamoid.input.MultiTouchInput;
 import android.app.Activity;
 import android.content.Context;
@@ -16,10 +17,8 @@ import android.graphics.Bitmap.Config;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
 public abstract class Game extends Activity 
 {
