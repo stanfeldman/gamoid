@@ -1,6 +1,6 @@
 package gamoid.game.models;
 
-import gamoid.game.models.Mover.Direction;
+import gamoid.game.models.PlayerMover.Direction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.List;
 // абстрактный участник игры
 public abstract class Player
 {
-	public Player(Game game)
+	public Player(World world)
 	{
-		this.game = game;
+		this.world = world;
 	}
 	
 	public abstract void draw();
@@ -41,6 +41,7 @@ public abstract class Player
 	
 	public void kill()
 	{
+		world.getPlayers().remove(this);
 		isAlive = false;
 	}
 	
@@ -53,10 +54,10 @@ public abstract class Player
 	public List<Cell> getPlace() { return place; }
 	
 	// средство передвижения участника игры
-	protected Mover mover;
+	protected PlayerMover mover;
 	protected Direction direction = Direction.UP;
 	// место на игровом поле, в котором находится участник игры(набор ячеек)
 	protected List<Cell> place = new ArrayList<Cell>();
-	protected Game game;
+	protected World world;
 	protected boolean isAlive = true;
 }

@@ -88,6 +88,10 @@ public abstract class Game extends Activity
 	
 	public Map<String, Object> getAssetsCache() { return assetsCache; }
 	
+	public boolean isOver() { return isOver; }
+	
+	public void isOver(boolean over) { isOver = over; }
+	
 	protected Bitmap frameBuffer;
 	protected RenderView renderView;
 	protected Graphics graphics;
@@ -97,4 +101,5 @@ public abstract class Game extends Activity
 	protected WakeLock wakeLock;
 	protected AssetManager assets;
 	protected Map<String, Object> assetsCache = new HashMap<String, Object>();
+	protected boolean isOver = false;
 }

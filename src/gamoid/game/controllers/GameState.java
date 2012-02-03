@@ -1,8 +1,10 @@
 package gamoid.game.controllers;
 
+import gamoid.game.models.World;
+
 public abstract class GameState extends State
 {
-	public GameState(GameStateMachine gameStateMachine)
+	public GameState(GameStateMachine<? extends World> gameStateMachine)
 	{
 		super(gameStateMachine);
 		this.gameStateMachine = gameStateMachine;
@@ -12,5 +14,5 @@ public abstract class GameState extends State
 	
 	public abstract void draw(float deltaTime);
 	
-	protected GameStateMachine gameStateMachine;
+	protected GameStateMachine<? extends World> gameStateMachine;
 }

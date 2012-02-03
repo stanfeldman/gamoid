@@ -1,11 +1,11 @@
 package gamoid.game.models;
 
 // то, что двигает игрока
-public abstract class Mover
+public abstract class PlayerMover
 {
 	public enum Direction { UP, LEFT, DOWN, RIGHT }
 	
-	public Mover(Player player)
+	public PlayerMover(Player player)
 	{
 		this.player = player;
 	}

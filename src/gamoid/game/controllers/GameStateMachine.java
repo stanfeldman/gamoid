@@ -1,12 +1,12 @@
 package gamoid.game.controllers;
 
-import gamoid.game.models.Game;
+import gamoid.game.models.World;
 
-public class GameStateMachine extends StateMachine<GameState>
+public class GameStateMachine<W extends World> extends StateMachine<GameState>
 {
-	public GameStateMachine(Game game)
+	public GameStateMachine(W world)
 	{
-		this.game = game;
+		this.world = world;
 	}
 	
 	public void update(float deltaTime)
@@ -21,7 +21,7 @@ public class GameStateMachine extends StateMachine<GameState>
 			currentState.draw(deltaTime);
 	}
 	
-	public Game getGame() { return game; }
+	public W getWorld() { return world; }
 	
-	private Game game;
+	protected W world;
 }
