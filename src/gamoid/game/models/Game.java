@@ -65,6 +65,13 @@ public abstract class Game extends Activity
 			screen.dispose();
 	}
 
+	@Override
+	public void onBackPressed() 
+	{
+		if(!screen.back())
+			super.onBackPressed();
+	}
+
 	public void setScreen(Screen screen)
 	{
 		if(screen == null)

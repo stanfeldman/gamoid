@@ -19,5 +19,7 @@ public abstract class Screen
 	
 	public void dispose() {}
 	
+	public boolean back() { return false; }
+	
 	protected Game game;
 }
