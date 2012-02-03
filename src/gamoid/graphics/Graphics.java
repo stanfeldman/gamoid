@@ -10,6 +10,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 
 public class Graphics
 {
@@ -61,6 +62,16 @@ public class Graphics
 		paint.setColor(color);
 		paint.setStyle(Style.FILL);
 		canvas.drawRect(x, y, x + width	- 1, y + height - 1, paint);
+	}
+	
+	public void drawText(String text, int x, int y, int size, String typefacePath)
+	{
+		Paint paint = new Paint();
+		paint.setTextSize(size);
+		Typeface typeface = Typeface.createFromAsset(assets, typefacePath);
+		paint.setTypeface(typeface);
+		paint.setAntiAlias(true);
+		canvas.drawText(text, x, y, paint);
 	}
 	
 	public void drawImage(Bitmap bitmap, int x, int y, int srcX, int srcY, int srcWidth, int srcHeight)
