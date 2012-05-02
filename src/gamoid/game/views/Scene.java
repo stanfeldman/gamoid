@@ -2,9 +2,9 @@ package gamoid.game.views;
 
 import gamoid.game.models.Game;
 
-public abstract class Screen 
+public abstract class Scene 
 {
-	public Screen(Game game)
+	public Scene(Game game)
 	{
 		this.game = game;
 	}

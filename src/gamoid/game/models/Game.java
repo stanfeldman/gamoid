@@ -5,7 +5,7 @@ import java.util.Map;
 
 import gamoid.filesystem.FileIO;
 import gamoid.game.views.RenderView;
-import gamoid.game.views.Screen;
+import gamoid.game.views.Scene;
 import gamoid.graphics.Graphics;
 import gamoid.input.MultiTouchInput;
 import android.app.Activity;
@@ -72,7 +72,7 @@ public abstract class Game extends Activity
 			super.onBackPressed();
 	}
 
-	public void setScreen(Screen screen)
+	public void setScreen(Scene screen)
 	{
 		if(screen == null)
 			throw new IllegalArgumentException("Screen must not be null");
@@ -83,9 +83,9 @@ public abstract class Game extends Activity
 		this.screen.update(0);
 	}
 	
-	public abstract Screen getStartScreen();
+	public abstract Scene getStartScreen();
 	
-	public Screen getCurrentScreen() { return screen; }
+	public Scene getCurrentScreen() { return screen; }
 	
 	public MultiTouchInput getMultiTouchInput() { return multiTouchInput; }
 	
@@ -104,7 +104,7 @@ public abstract class Game extends Activity
 	protected Graphics graphics;
 	protected FileIO fileIO;
 	protected MultiTouchInput multiTouchInput;
-	protected Screen screen;
+	protected Scene screen;
 	protected WakeLock wakeLock;
 	protected AssetManager assets;
 	protected Map<String, Object> assetsCache = new HashMap<String, Object>();
